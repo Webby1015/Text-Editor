@@ -21,12 +21,7 @@ class TextEditor extends Component {
         selection.addRange(range);
       });
     };
-    
   };
-
-  
-
-  
 
   handleFormat = (command) => {
     document.execCommand(command);
@@ -41,20 +36,25 @@ class TextEditor extends Component {
 
   render() {
     return (
-      <div className="max-w-screen-lg mx-auto p-4">
-        <Header/>
+      <>
+      <div className=" mx-2 mt-2">
+        <Header />
         <Options // Use the Options component
           handleFormat={this.handleFormat}
           handleInsertLink={this.handleInsertLink}
         />
-        <div
-          className="border shadow-md h-screen p-20"
-          contentEditable={true}
-          onInput={this.handleChange}
-          dangerouslySetInnerHTML={{ __html: this.state.content }}
-          style={{ outline: "none" }}
-        />
-      </div>
+
+        </div>
+        <div className="max-w-screen-lg mx-auto p-4">
+          <div
+            className="border shadow-md bg-white   h-screen p-20"
+            contentEditable={true}
+            onInput={this.handleChange}
+            dangerouslySetInnerHTML={{ __html: this.state.content }}
+            style={{ outline: "none" }}
+          />
+        </div>
+      </>
     );
   }
 }
