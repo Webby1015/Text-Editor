@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./text-editor.css";
 import Options from "./options"; // Import the Options component
+import Header from "./Header";
 
 class TextEditor extends Component {
   constructor(props) {
@@ -23,6 +24,10 @@ class TextEditor extends Component {
     
   };
 
+  
+
+  
+
   handleFormat = (command) => {
     document.execCommand(command);
   };
@@ -37,7 +42,7 @@ class TextEditor extends Component {
   render() {
     return (
       <div className="max-w-screen-lg mx-auto p-4">
-        <h1 className="text-2xl font-bold mb-4">Text Editor</h1>
+        <Header/>
         <Options // Use the Options component
           handleFormat={this.handleFormat}
           handleInsertLink={this.handleInsertLink}
