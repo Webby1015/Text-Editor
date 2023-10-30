@@ -27,6 +27,13 @@ class TextEditor extends Component {
     document.execCommand(command);
   };
 
+  handleFontChange = (event) => {
+    const selectedFont = event.target.value;
+    this.setState({ selectedFont }, () => {
+      document.execCommand("fontName", false, selectedFont);
+    });
+  };
+
   handleInsertLink = () => {
     const url = prompt("Enter a URL:");
     if (url) {
@@ -34,7 +41,8 @@ class TextEditor extends Component {
     }
   };
 
-  render() {
+  render() 
+  {
     return (
       <>
       <div className=" mx-2 mt-2">
@@ -42,7 +50,9 @@ class TextEditor extends Component {
         <Options // Use the Options component
           handleFormat={this.handleFormat}
           handleInsertLink={this.handleInsertLink}
+          handleFontChange={this.handleFontChange}
         />
+
 
         </div>
         <div className="max-w-screen-lg mx-auto p-4">

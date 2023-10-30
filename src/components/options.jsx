@@ -1,40 +1,58 @@
 import React from "react";
-import "./options.css";
-const Options = ({ handleFormat, handleInsertLink }) => {
+import './options.css'
+
+const Options = ({ handleFormat, handleInsertLink, handleFontChange,selectedFont }) => {
   return (
-    <div className=" space-x-2 rounded-sm mx-4 mb-4 bg-slate-200 py-1 px-2">
-      <button className=" hover:bg-slate-300 px-2 py-1 rounded-sm " onClick={() => handleFormat("bold")}>
-        <img className="h-4" src="src\assets\bold.png" alt="" srcset="" />
+    <div className=" space-x-2 flex rounded-sm mx-4 mb-4 bg-slate-200 py-1 px-2">
+                  <div className="font-change-select">
+        <select
+          value={selectedFont}
+          onChange={handleFontChange}
+        >
+          <option value="Arial">Arial</option>
+          <option value="Times New Roman">Times New Roman</option>
+          <option value="Courier New">Courier New</option>
+          {/* Add more font options as needed */}
+        </select>
+      </div>
+
+      
+      <button className=" hover:bg-slate-300 px-2 py-1 rounded-sm " onClick={() => handleFormat("bold")} title="Bold (Ctrl+B)">
+        <img className="h-4" src="src\assets\bold.png" alt="" srcSet="" />
       </button>
-      <button className="btn hover:bg-slate-300 hover:rounded-sm px-2 py-1   " onClick={() => handleFormat("italic")}>
-      <img className="h-4" src="src\assets\italics.png" alt="" srcset="" />
+      <button className="btn hover:bg-slate-300 hover:rounded-sm px-2 py-1   " onClick={() => handleFormat("italic")} title="Italic (Ctrl+I)">
+        <img className="h-4" src="src\assets\italics.png" alt="" srcSet="" />
       </button>
-      <button className="btn hover:bg-slate-300 hover:rounded-sm px-2 py-1   " onClick={() => handleFormat("underline")}>
-      <img className="h-4" src="src\assets\underline.png" alt="" srcset="" />
+      <button className="btn hover:bg-slate-300 hover:rounded-sm px-2 py-1   " onClick={() => handleFormat("underline")} title="Underline (Ctrl+U)">
+        <img className="h-4" src="src\assets\underline.png" alt="" srcSet="" />
       </button>
-      <button className="btn hover:bg-slate-300 hover:rounded-sm px-2 py-1   " onClick={() => handleFormat("justifyLeft")}>
-      <img className="h-4" src="src\assets\align-left.png" alt="" srcset="" />
+      <div className="verticalLine"></div>
+      <button className="btn hover:bg-slate-300 hover:rounded-sm px-2 py-1   " onClick={() => handleFormat("justifyLeft")} title="Align Left">
+        <img className="h-4" src="src\assets\align-left.png" alt="" srcSet="" />
       </button>
-      <button className="btn hover:bg-slate-300 hover:rounded-sm px-2 py-1   " onClick={() => handleFormat("justifyCenter")}>
-      <img className="h-4" src="src\assets\center-align.png" alt="" srcset="" />
+      <button className="btn hover-bg-slate-300 hover:rounded-sm px-2 py-1   " onClick={() => handleFormat("justifyCenter")} title="Align Center">
+        <img className="h-4" src="src\assets\center-align.png" alt="" srcSet="" />
       </button>
-      <button className="btn hover:bg-slate-300 hover:rounded-sm px-2 py-1   " onClick={() => handleFormat("justifyRight")}>
-      <img className="h-4" src="src\assets\right-align.png" alt="" srcset="" />
+      <button className="btn hover:bg-slate-300 hover:rounded-sm px-2 py-1   " onClick={() => handleFormat("justifyRight")} title="Align Right">
+        <img className="h-4" src="src\assets\right-align.png" alt="" srcSet="" />
       </button>
-      <button className="btn hover:bg-slate-300 hover:rounded-sm px-2 py-1   " onClick={() => handleFormat("insertUnorderedList")}>
-      <img className="h-4" src="src\assets\unorderd_list.png" alt="" srcset="" />
+      <div className="verticalLine"></div>
+      <button className="btn hover:bg-slate-300 hover:rounded-sm px-2 py-1   " onClick={() => handleFormat("insertUnorderedList")} title="Unordered List (Ctrl+Shift+8)">
+        <img className="h-4" src="src\assets\unorderd_list.png" alt="" srcSet="" />
       </button>
-      <button className="btn hover:bg-slate-300 hover:rounded-sm px-2 py-1   " onClick={() => handleFormat("insertOrderedList")}>
-      <img className="h-4" src="src\assets\ordered_list.png" alt="" srcset="" />
+      <button className="btn hover:bg-slate-300 hover:rounded-sm px-2 py-1   " onClick={() => handleFormat("insertOrderedList")} title="Ordered List (Ctrl+Shift+7)">
+        <img className="h-4" src="src\assets\ordered_list.png" alt="" srcSet="" />
       </button>
-      <button className="btn hover:bg-slate-300 hover:rounded-sm px-2 py-1   " onClick={() => handleFormat("undo")}>
-      <img className="h-4" src="src\assets\undo.png" alt="" srcset="" />
+      <div className="verticalLine"></div>
+      <button className="btn hover:bg-slate-300 hover:rounded-sm px-2 py-1   " onClick={() => handleFormat("undo")} title="Undo (Ctrl+Z)">
+        <img className="h-4" src="src\assets\undo.png" alt="" srcSet="" />
       </button>
-      <button className="btn hover:bg-slate-300 hover:rounded-sm px-2 py-1   " onClick={() => handleFormat("redo")}>
-      <img className="h-4" src="src\assets\redo.png" alt="" srcset="" />
+      <button className="btn hover:bg-slate-300 hover:rounded-sm px-2 py-1   " onClick={() => handleFormat("redo")} title="Redo (Ctrl+Y)">
+        <img className="h-4" src="src\assets\redo.png" alt="" srcSet="" />
       </button>
-      <button className="btn hover:bg-slate-300 hover:rounded-sm px-2 py-1   " onClick={handleInsertLink}>
-      <img className="h-4" src="src\assets\link.png" alt="" srcset="" />
+      <div className="verticalLine"></div>
+      <button className="btn hover:bg-slate-300 hover:rounded-sm px-2 py-1   " onClick={handleInsertLink} title="Insert Link">
+        <img className="h-4" src="src\assets\link.png" alt="" srcSet="" />
       </button>
     </div>
   );

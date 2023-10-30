@@ -12,9 +12,9 @@ function Header() {
         placeholder="Untitled document"
       />
       <div className="space-x-1 mr-4">
-        <button className=" px-3 py-2 hover:bg-slate-300 rounded-lg"><img className=" h-8" src="src\assets\diskette.png" alt="" srcset="" /></button>
-        <button className=" px-3 py-2 hover:bg-slate-300 rounded-lg"><img className=" h-8" src="src\assets\pdf.png" alt="" srcset="" /></button>
-        <button className=" px-3 py-2 hover:bg-slate-300 rounded-lg"><img className=" h-8" src="src\assets\docx.png" alt="" srcset="" /></button>
+        <button className=" px-3 py-2 hover:bg-slate-300 rounded-md"><img className=" h-8" src="src\assets\diskette.png" alt="" srcset="" /></button>
+        <button className=" px-3 py-2 hover:bg-slate-300 rounded-md"><img className=" h-8" src="src\assets\pdf.png" alt="" srcset="" /></button>
+        <button className=" px-3 py-2 hover:bg-slate-300 rounded-md"><img className=" h-8" src="src\assets\docx.png" alt="" srcset="" /></button>
 
       </div>
     </div>

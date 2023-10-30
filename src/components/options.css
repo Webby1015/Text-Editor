@@ -1,4 +1,3 @@
-.vl {
-    border-left: 6px solid green;
-    height: 500px;
+.verticalLine {
+    border-left: thin solid rgb(54, 54, 54);
   }
