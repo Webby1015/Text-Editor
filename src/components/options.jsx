@@ -49,7 +49,7 @@ const Options = ({ handleFormat, handleInsertLink, handleFontChange, selectedFon
     value={selectedFont}
     onChange={handleFontChange}
 
-       
+           
   >
     {fontOptions.map((font, index) => (
       <option key={index} value={font}>
