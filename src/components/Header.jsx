@@ -11,10 +11,11 @@ function Header() {
         type="text"
         placeholder="Untitled document"
       />
-      <div className="space-x-2">
-        <button className="bg-blue-500 text-white px-3 py-2 rounded-md">Save</button>
-        <button className="bg-green-500 text-white px-3 py-2 rounded-md">Save as PDF</button>
-        <button className="bg-yellow-500 text-white px-3 py-2 rounded-md">Save as .docx</button>
+      <div className="space-x-1 mr-4">
+        <button className=" px-3 py-2 hover:bg-slate-300 rounded-lg"><img className=" h-8" src="src\assets\diskette.png" alt="" srcset="" /></button>
+        <button className=" px-3 py-2 hover:bg-slate-300 rounded-lg"><img className=" h-8" src="src\assets\pdf.png" alt="" srcset="" /></button>
+        <button className=" px-3 py-2 hover:bg-slate-300 rounded-lg"><img className=" h-8" src="src\assets\docx.png" alt="" srcset="" /></button>
+
       </div>
     </div>
   );
