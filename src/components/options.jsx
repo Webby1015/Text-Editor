@@ -58,7 +58,7 @@ const Options = ({ handleFormat, handleInsertLink, handleFontChange, selectedFon
     ))}
   </select>
 </div>
-
+    
 
      
 
