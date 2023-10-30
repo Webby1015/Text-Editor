@@ -42,22 +42,6 @@ const Options = ({ handleFormat, handleInsertLink, handleFontChange, selectedFon
     ))}
   </select>
 </div>
-
-<div className="font-change-select">
-  <select
-    className="focus:outline-none px-2 border rounded-md transition duration-300 ease-in-out"
-    value={selectedFont}
-    onChange={handleFontChange}
-
-           
-  >
-    {fontOptions.map((font, index) => (
-      <option key={index} value={font}>
-        {font}
-      </option>
-    ))}
-  </select>
-</div>
     
 
      

@@ -7,7 +7,8 @@ class TextEditor extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      content: localStorage.getItem("savedContent") || "", // Load saved content from local storage
+      content: localStorage.getItem("savedContent") || "",
+      selectedFontSize: "medium", // Initially set to a default size
     };
   }
 
@@ -23,13 +24,14 @@ class TextEditor extends Component {
       const textNode = this.editor.lastChild;
       if (textNode) {
         const range = document.createRange();
-        range.setStart(textNode, textNode.length);
-        range.setEnd(textNode, textNode.length);
+        range.selectNodeContents(textNode);
+        range.collapse(false);
         selection.removeAllRanges();
         selection.addRange(range);
       }
     });
   };
+  
   
 
   handleFormat = (command) => {
@@ -55,6 +57,11 @@ class TextEditor extends Component {
     alert("Content saved!");
   };
 
+    handleTextSizeChange = (size) => {
+    document.execCommand("fontSize", false, size);
+    this.setState({ selectedFontSize: size });
+  };
+
   render() {
     return (
       <>
@@ -65,6 +72,26 @@ class TextEditor extends Component {
             handleInsertLink={this.handleInsertLink}
             handleFontChange={this.handleFontChange}
           />
+          <div>
+            <button
+              onClick={() => this.handleTextSizeChange("1")}
+              className={this.state.selectedFontSize === "1" ? "active" : ""}
+            >
+              Small 
+            </button>
+            <button
+              onClick={() => this.handleTextSizeChange("3")}
+              className={this.state.selectedFontSize === "3" ? "active" : ""}
+            >
+              Medium
+            </button>
+            <button
+              onClick={() => this.handleTextSizeChange("5")}
+              className={this.state.selectedFontSize === "5" ? "active" : ""}
+            >
+              Large
+            </button>
+          </div>
         </div>
         <div className="max-w-screen-lg mx-auto p-4">
           <div
