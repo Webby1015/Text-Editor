@@ -64,27 +64,4 @@ MIT License
 Copyright (c) 2023 Abhishek Vedant
 ```
 
-## Add your name in contributers
-```text
-#### Name: [name](https://github.com/githunlink)
-
-- Place: location
-- Bio: anything
-- GitHub: [username](https://github.com/link)
-
-
-```
-
-##Contributers
-#### Name: [Webby1015](https://github.com/Webby1015)
-
-- Place: Ghaziabad, UP, India
-- Bio: 4th Year undergrad pursuing B.tech in Information Techonology Engineering
-- GitHub: [webby](https://github.com/Webby1015)
-
-
-#### Name: [Sashank Bhardwaj](https://github.com/Madara909)
-
-- Place: Ghaziabad, UP, India
-- Bio: 4th Year undergrad pursuing B.tech in Information Techonology Engineering
-- GitHub: [Madara909](https://github.com/Madara909)
+## Acknowledgments
