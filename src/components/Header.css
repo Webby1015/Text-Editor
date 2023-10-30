@@ -1,0 +1,21 @@
+/* Define the initial state of the bubble */
+#green-bubble {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border: 2px solid green;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0);
+  }
+  
+  /* Define the animation when button is clicked */
+  #green-bubble.active {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+  }
+  

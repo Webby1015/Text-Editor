@@ -1,6 +1,7 @@
 import React from "react";
 
-function Header() {
+function Header({handleSaveContent}) {
+
   return (
     <div className="flex items-center">
       <div className="text-2xl font-bold m-4 flex">
@@ -12,7 +13,7 @@ function Header() {
         placeholder="Untitled document"
       />
       <div className="space-x-1 mr-4">
-        <button className=" px-3 py-2 hover:bg-slate-300 rounded-md"><img className=" h-8" src="src\assets\diskette.png" alt="" srcset="" /></button>
+        <button className=" px-3 py-2 hover:bg-slate-300 rounded-md"><img className=" h-8" src="src\assets\diskette.png" alt="" srcset="" onClick={handleSaveContent}/></button>
         <button className=" px-3 py-2 hover:bg-slate-300 rounded-md"><img className=" h-8" src="src\assets\pdf.png" alt="" srcset="" /></button>
         <button className=" px-3 py-2 hover:bg-slate-300 rounded-md"><img className=" h-8" src="src\assets\docx.png" alt="" srcset="" /></button>
 
