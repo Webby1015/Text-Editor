@@ -61,7 +61,7 @@ const Options = ({ handleFormat, handleInsertLink, handleFontChange, selectedFon
     
 
      
-      <div></div>
+      {/* <div></div> */}
 
       <button  className="hover:bg-slate-300 px-2 py-1 rounded-sm" onClick={() => handleFormat("bold")} title="Bold (Ctrl+B)">
         <img className="h-4" src="src\assets\bold.png" alt="" srcSet="" />
