@@ -4,7 +4,7 @@ function Header({handleSaveContent}) {
 
   return (
     <div className="flex items-center">
-      <div className="text-2xl font-bold m-4 flex">
+      <div style={{userSelect:'none'}} className="text-2xl font-bold m-4 flex">
         <p className="bg-blue-400 text-white px-1 rounded-sm">Text</p> Editor
       </div>
       <input
