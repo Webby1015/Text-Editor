@@ -1,7 +1,7 @@
 import React from "react";
 import './options.css'
 
-const Options = ({ handleFormat, handleInsertLink, handleFontChange, selectedFont }) => {
+const Options = ({ handleFormat, handleInsertLink, handleFontChange, selectedFont })=>{
   const fontOptions = [
     "Arial",
     "Times New Roman",

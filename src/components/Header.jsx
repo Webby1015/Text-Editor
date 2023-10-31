@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header({handleSaveContent}) {
+function Header({handleSaveContent}){
 
   return (
     <div className="flex items-center">
