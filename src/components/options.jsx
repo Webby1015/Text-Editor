@@ -87,7 +87,7 @@ const Options = ({ handleFormat, handleInsertLink, handleFontChange, selectedFon
         <img className="h-4" src="src\assets\link.png" alt="" srcSet="" />
       </button>
     </div>
-  );
+  );                          
 };
 
 export default Options;
