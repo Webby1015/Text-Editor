@@ -98,7 +98,7 @@ class TextEditor extends Component {
             className="border shadow-md bg-white h-screen p-20"
             contentEditable={true}
             onInput={this.handleChange}
-            ref={(editor) => (this.editor = editor)}
+            ref={(editor) => (this.editor = editor)}         
             dangerouslySetInnerHTML={{ __html: this.state.content }}
             style={{ outline: "none" }}
           />
