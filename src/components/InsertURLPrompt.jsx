@@ -15,7 +15,7 @@ class InsertURLPrompt extends React.Component {
     this.props.onURLInsert(url);
     this.setState({ url: "" });
   };
-
+                                        
   render() {
     return (
       <div>
